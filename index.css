@@ -1,0 +1,317 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: content-box;
+list-style: none;
+font-family: 'Noto Sans JP', sans-serif;
+text-decoration: none;
+color: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.3)),
+    url(imagenes/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@keyframes desplazamientoLogos {
+    from{
+        margin-left:500px;
+    }
+    to{
+        margin-left: -800px;
+    }
+}
+
+
+.contenedor-navbar{
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+}
+.contenedor-navegador{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(162,219,250,0) 100%);
+    color: rgb(238, 238, 238);
+    z-index: 3;
+}
+
+.contenedor-nav-list-items{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+.contenedor-nonav-list-items{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.list-item{
+    text-align: center;
+    grid-column: 1/2;
+    font-size: 0.85em;
+    font-weight: 200;
+    font-style: oblique;
+    border-bottom: 2px solid transparent;
+    padding: 1px;
+}
+.list-item:hover{
+    text-shadow: 0px 0px 5px #CCC;
+    
+}
+.contenedor-contenido-header{
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    color: white;
+    height: 600px;
+    position: relative;
+    text-align: center;
+    margin-top: 80px;
+}
+.contenedor-palabras-header{
+    display: grid;
+    width: 100%;
+    max-width: 500px;
+    margin:auto;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (3,50px);
+    margin-bottom: 60px;
+}
+#ex{
+    font-size: 1.8em;
+    font-weight: 500;
+    font-style: italic;
+    grid-column: 3;
+    grid-row: 3;
+
+}
+#un{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 1.8em;
+    font-weight: 400;
+    font-style: oblique;
+}
+#wo{
+    grid-column:2/3;
+    grid-row: 2;
+    font-size: 2.8em;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+
+}
+.titulo-principal-header{
+    font-size: 1.7em;
+    font-weight: 600;
+}
+.texto-informativo-header{
+    padding-top: 20px;
+    margin:auto;
+    width: 85%;
+}
+.boton-header{
+    outline: none;
+    width: 35%;
+    max-width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 25px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    font-size: 1.3em;
+    font-weight: 500;
+    transition: 200ms;
+}
+.boton-header:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px white;
+}
+.contenedor-main{
+    height: 500px;
+}
+.titulo-about-us-main{
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contenedor-texto-about-us{
+    display: flex;
+    width: 95%;
+    max-width: 600px;
+    margin:auto;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+#parrafo-secundario{
+    margin-top: 15px;
+}
+
+.contenedor-blur{
+    width: 100%;
+    height: 120px;
+    background-color: black;
+    opacity: 0.4;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 2;
+    top: 0px;
+}
+.contenedor-marcas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.contenedor-marcas h2{
+    color: white;
+    margin-top: 15px;
+}
+.contenedor-logo-marcas{
+    display: flex;
+    animation-name: desplazamientoLogos;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    overflow-x: hidden;
+    
+}
+.logo-marca{
+    width: 200px;
+}
+.contenedor-section-cabañas{
+    width: 100%;
+    height: 1000px;
+    background-color: red;
+    text-align: center;
+    color: white;
+}
+.contenedor-section-cabañas h2{
+    font-size: 1.5em;
+}
+.contenedor-section-cabañas p{
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.contenedor-cabañas{
+    background-color: yellow;
+    display: flex;
+    margin-top: 10px;
+    height: 1900px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.foto-cabañas{
+    width: 100%;
+    height: 250px;
+    transition: 200ms ease;
+}
+.foto-cabañas:hover{
+    transform: scale(1.03);
+    width: 100%;
+    height: 250px;
+}
+.contenedor-carta-cabañas{
+    width: 90%;
+    height: 350px;
+    background-color: blue;
+    overflow: hidden;
+}
+.contenedor-texto-card{
+    width: 100%;
+}
+#foto-hover{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.foto-cabañas:hover #foto-hover{
+    display: block;
+}
+@media  screen and (min-width:320px) {
+
+    .contenedor-palabras-header{
+        display: grid;
+        width: 100%;
+        margin:auto;
+        grid-template-columns: (3, 1fr);
+        grid-template-rows: (3,50px);
+        margin-bottom: 60px;
+    }
+    #ex{
+        font-size: 1.1em;
+        font-weight: 500;
+        font-style: italic;
+        text-align: left;
+        grid-column: 3;
+        grid-row: 3;
+    
+    }
+    #un{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-size: 1.1em;
+        font-weight: 400;
+        font-style: oblique;
+    }
+    #wo{
+        grid-column:2/3;
+        grid-row: 2;
+        font-size: 1.6em;
+        text-align: center;
+        font-weight: 700;
+        font-style: italic;
+    
+    }
+    .display{
+        display: none;
+    }
+}
+@media screen and (min-width:420px) {
+    
+}
+@media screen and (min-width:500px) {
+    .parrafo-about-us{
+        width: 48%;
+    }
+    .contenedor-texto-about-us{
+        margin-top: 25px;
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #parrafo-secundario{
+        margin-top: 0px;
+    }
+}
