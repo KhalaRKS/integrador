@@ -11,6 +11,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    min-width: 320px;
     background-image: 
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.3)),
     url(imagenes/background.jpg);
@@ -19,10 +20,31 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
+@keyframes tituloCard {
+    from{
+        margin-top:-70px;
+        opacity: 0;
+    }
+    to{
+        margin-top: -190px;
+        opacity: 1;
+    }
 
+}
+@keyframes botonCard {
+    from{
+        margin-top: -50px;
+        opacity: 0;
+    }
+    to{
+        margin-top: -150px;
+        opacity: 1;
+    }
+
+}
 @keyframes desplazamientoLogos {
     from{
-        margin-left:500px;
+        margin-left:400px;
     }
     to{
         margin-left: -800px;
@@ -75,13 +97,39 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     text-shadow: 0px 0px 5px #CCC;
     
 }
+.menu-account{
+    display: none;
+    padding: 5px;
+}
+.menu-account li{
+    border-bottom: 1px solid transparent;
+
+}
+.menu-account li:hover{
+    border-bottom: 1px solid #11cad7;
+
+}
+#account-menu:hover .menu-account{
+    display: block;
+    position: absolute;
+    width: 15%;
+    right: 5%;
+    color: white;
+    font-size: 0.95em;
+}
+#language-menu:hover .menu-account{
+    display: block;
+    position: absolute;
+    width: 15%;
+    right: 30%;
+    color: white;
+}
 .contenedor-contenido-header{
     width: 100%;
     overflow: hidden;
     z-index: 0;
     color: white;
     height: 600px;
-    position: relative;
     text-align: center;
     margin-top: 80px;
 }
@@ -190,6 +238,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    margin-top: 600px;
 }
 .contenedor-marcas h2{
     color: white;
@@ -210,8 +259,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
 }
 .contenedor-section-cabañas{
     width: 100%;
-    height: 1000px;
-    background-color: red;
+    height: 1550px;
     text-align: center;
     color: white;
 }
@@ -223,10 +271,9 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     margin-top: 5px;
 }
 .contenedor-cabañas{
-    background-color: yellow;
     display: flex;
     margin-top: 10px;
-    height: 1900px;
+    height: 2050px;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -236,28 +283,163 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     width: 100%;
     height: 250px;
     transition: 200ms ease;
+    
 }
-.foto-cabañas:hover{
+.contenedor-carta-cabañas{
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    height: 330px;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    transition: 200ms;
+    
+}
+.contenedor-carta-cabañas:hover{
+    box-shadow: 0px 0px 25px inset #CCC;
+    background-color: white;
+}
+.contenedor-carta-cabañas:hover .foto-cabañas{
+    filter: contrast(0.6);
     transform: scale(1.03);
     width: 100%;
     height: 250px;
 }
-.contenedor-carta-cabañas{
-    width: 90%;
-    height: 350px;
-    background-color: blue;
-    overflow: hidden;
+.contenedor-boton-hover{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.contenedor-boton-hover h2{
+    display: none;
+}
+.contenedor-carta-cabañas:hover h2{
+    display: block;
+    margin-top: -190px;
+    animation-name: tituloCard;
+    animation-duration: 800ms;
+}
+#boton-card-hover{
+    display: none;
+    position: absolute;
+}
+.contenedor-carta-cabañas:hover #boton-card-hover{
+    animation-name: botonCard;
+    animation-duration: 800ms;
+    display: block;
+    width: 33%;
+    max-width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    margin-top: -150px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    font-weight: 500;
+    transition: 200ms;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#boton-card-hover:hover{
+    box-shadow: 0px 0px 5px inset white,
+                0px 0px 5px white;
+    text-shadow: 0px 0px 5px black;
+    color: red;
 }
 .contenedor-texto-card{
     width: 100%;
+    color: black;
 }
-#foto-hover{
+.contenedor-flex-contacto{
+    display: flex;
+}
+.contenedor-contacto-bg{
+    background-color: white;
+}
+.contenedor-foto-contacto{
     display: none;
-    position: absolute;
-    z-index: 1;
 }
-.foto-cabañas:hover #foto-hover{
-    display: block;
+.contenedor-section-formulario{
+    width: 100%;
+    height: 520px;
+    background-color: white;
+}
+.contenedor-form{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    margin-top: 25px;
+    top: 20px;
+    width: 80%;
+    max-width: 320px;
+    box-shadow: 0px 0px 25px inset #CCC,
+    0px 0px 10px #CCC;
+    border-radius: 30px;
+    padding: 25px;
+    text-align: center;
+}
+.contenedor-form input,
+.contenedor-form textarea{
+    margin:auto;
+    min-width: 250px;
+    max-width: 320px;
+    outline: none;
+    border: 1px solid #11cad7;
+    transition: 100ms;
+    background-color: #11cad788;
+    color: black;
+}
+.contenedor-form textarea{
+    min-height: 252px;
+    max-height: 252px;
+    resize: none;
+}
+.contenedor-form input:focus,
+.contenedor-form textarea:focus{
+    border: 1px solid #0ea4af;
+}
+#titulo-form{
+    text-align: center;
+}
+#btn-enviar{
+    margin-top: 5px;
+    cursor: pointer;
+}
+#btn-enviar:hover{
+    opacity: 0.85;
+}
+#btn-enviar:focus{
+    border: 1px solid #11cad7;
+}
+#separador{
+    margin: auto;
+    width: 85%;
+    max-width: 620px;
+    border-bottom: 1px solid #11cad7;
+    margin-bottom: 10px;
+}
+.contenedor-section-nav-footer{
+    background-color: white;
+    height: 120px;
+}
+.contenedor-section-nav-footer h2{
+    font-size: 1em;
+}
+.contenedor-section-nav-footer li a{
+    font-size: 0.8em;
+}
+.contenedor-section-nav-footer li a:hover{
+    opacity: 0.75;
+}
+.contenedor-nav-footer{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 600px;
+}
+.contenedor-flex-contacto{
+    margin-top: 2400px;
 }
 @media  screen and (min-width:320px) {
 
@@ -297,6 +479,14 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     .display{
         display: none;
     }
+    .contenedor-boton-hover h2{
+        display: none;
+        font-size: 1.5em;
+    }
+    .contenedor-texto-card{
+        margin: auto;
+        width: 95%;
+    }
 }
 @media screen and (min-width:420px) {
     
@@ -313,5 +503,112 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     }
     #parrafo-secundario{
         margin-top: 0px;
+    }
+}
+@media screen and (min-width:620px) {
+    .contenedor-section-cabañas{
+        height: 800px;
+    }
+    .contenedor-cabañas{
+        display: flex;
+        height: 800px;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items:flex-start;
+        align-content:flex-start;
+        width: 90%;
+        margin: auto;
+    }
+    .foto-cabañas{
+        width: 100%;
+        height: 250px;
+        transition: 200ms ease;
+        
+    }
+    .contenedor-carta-cabañas{
+        margin-top: 25px;
+        width: 45%;
+        border-radius: 10px;
+        height: 330px;
+        background-color: rgba(255, 255, 255, 0.9);
+        overflow: hidden;
+    }
+    .texto-informativo-header{
+        padding-top: 20px;
+        margin:auto;
+        width: 85%;
+    }
+    .contenedor-flex-contacto{
+        margin-top: 1200px;
+    }
+    .contenedor-marcas{
+        margin-top: 350px;
+    }
+}
+@media screen and (min-width:750px) {
+    .contenedor-contacto-bg{
+        margin-top: 1200px;
+    }
+    .contenedor-flex-contacto{
+        flex-direction: row;
+        margin: auto;
+        max-width: 1200px;
+    }
+    .contenedor-foto-contacto{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        width: 100%;
+        position: relative;
+    }
+    .contenedor-section-formulario{
+        background-color: none;
+    }
+    .imagen-contacto{
+        width: 80%;
+        max-width: 500px;
+        margin: auto;
+
+    }
+    .contenedor-foto-contacto{
+        display: flex;
+    }
+    .contenedor-texto-contacto{
+        width: 80%;
+        margin: auto;
+    }
+}
+@media screen and (min-width:1150px) {
+    .contenedor-carta-cabañas{
+        width: 45%;
+        max-width: 380px;
+    }
+    .texto-informativo-header{
+        padding-top: 20px;
+        margin:auto;
+        width: 65%;
+    }
+}
+@media screen and (min-width:1250px) {
+    .contenedor-contacto-bg{
+        margin-top: 950px;
+    }
+    .contenedor-cabañas{
+        display: flex;
+        height: 800px;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items:flex-start;
+        align-content:flex-start;
+        width: 70%;
+        margin: auto;
+    }
+    .contenedor-carta-cabañas{
+        width: 30%;
+        max-width: 350px;
+    }
+    .contenedor-marcas{
+        margin-top: 50px;
     }
 }
