@@ -10,6 +10,16 @@ color: inherit;
 html{
     scroll-behavior: smooth;
 }
+.derechos{
+    font-size: 0.8em;
+    font-weight: 400;
+    text-align: center;
+    
+}
+.derechos a{
+    color: #11cad7;
+    text-decoration: underline;
+}
 body{
     min-width: 320px;
     background-image: 
@@ -131,7 +141,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     color: white;
     height: 600px;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 35px;
 }
 .contenedor-palabras-header{
     display: grid;
@@ -171,7 +181,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     font-weight: 600;
 }
 .texto-informativo-header{
-    padding-top: 20px;
+    padding-top: 10px;
     margin:auto;
     width: 85%;
 }
@@ -259,6 +269,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
 }
 .contenedor-section-cabañas{
     width: 100%;
+    margin-top: 25px;
     height: 1550px;
     text-align: center;
     color: white;
@@ -362,7 +373,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
 }
 .contenedor-section-formulario{
     width: 100%;
-    height: 520px;
+    height: 600px;
     background-color: white;
 }
 .contenedor-form{
@@ -377,6 +388,10 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     0px 0px 10px #CCC;
     border-radius: 30px;
     padding: 25px;
+    text-align: center;
+}
+.texto-form{
+    margin-top: 5px;
     text-align: center;
 }
 .contenedor-form input,
@@ -421,7 +436,6 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
 }
 .contenedor-section-nav-footer{
     background-color: white;
-    height: 120px;
 }
 .contenedor-section-nav-footer h2{
     font-size: 1em;
@@ -437,6 +451,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     justify-content: space-around;
     margin: auto;
     max-width: 600px;
+    height: 100px;
 }
 .contenedor-flex-contacto{
     margin-top: 2400px;
@@ -489,7 +504,15 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     }
 }
 @media screen and (min-width:420px) {
-    
+    .contenedor-contenido-header{
+        margin-top: 60px;
+    }
+    .texto-informativo-header{
+        margin-top: 15px;
+    }
+    .boton-header{
+        margin-top: 50px;
+    }
 }
 @media screen and (min-width:500px) {
     .parrafo-about-us{
@@ -544,11 +567,15 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
     }
     .contenedor-marcas{
         margin-top: 350px;
+
+    }
+    .contenedor-contacto-bg{
+        margin-top: 1300px;
     }
 }
 @media screen and (min-width:750px) {
-    .contenedor-contacto-bg{
-        margin-top: 1200px;
+    .texto-form{
+        display: none;
     }
     .contenedor-flex-contacto{
         flex-direction: row;
