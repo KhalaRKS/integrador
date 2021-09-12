@@ -16,6 +16,15 @@ html{
     text-align: center;
     
 }
+#margin{
+    padding-top: 55px;
+}
+#idioma{
+    left:58%;
+}
+#account{
+    left: 80%;
+}
 .derechos a{
     color: #11cad7;
     text-decoration: underline;
@@ -614,6 +623,12 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 52%, rgba(
         padding-top: 20px;
         margin:auto;
         width: 65%;
+    }
+    #idioma{
+        left:56%;
+    }
+    #account{
+        left: 80%;
     }
 }
 @media screen and (min-width:1250px) {
